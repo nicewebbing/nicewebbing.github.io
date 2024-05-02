@@ -29,7 +29,9 @@
 
 <body>
     <div class="popup" id="popup">
+        <b> ID: </b><br/><span id="theID"></span><br/><br/>
         <b> Name: </b><br/><span id="randomName"></span><br/><br/>
+        <b> English Name: </b><br/><span id="englishName"></span><br/><br/>
         <b> Location: </b><br/><span id="location"></span><br/><br/>
         <b> Open Hours: </b><br/><span id="openhours"></span><br/><br/>
         <b> Food Type: </b><br/><span id="FoodType"></span><br/><br/>
@@ -60,7 +62,9 @@
 
         function shuffleNames() {
             theList.sort(() => Math.random() - 0.5);
+            document.getElementById('theID').textContent = theList[0]["ID"];
             document.getElementById('randomName').textContent = theList[0]["MainName"];
+            document.getElementById('englishName').textContent = theList[0]["EnglishName"];
             document.getElementById('location').textContent = theList[0]["Location"];
             document.getElementById('openhours').textContent = theList[0]["Open Hours"];
             document.getElementById('FoodType').textContent = theList[0]["FoodType"];
